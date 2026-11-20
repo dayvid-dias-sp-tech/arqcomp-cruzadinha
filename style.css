@@ -1,0 +1,499 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--ink:#111827;--muted:#778195;--paper:#f4f6fa;--white:#fff;--blue:#2457e6;--blue-dark:#173db4;--cyan:#6ce5d2;--line:#e5e9f1;--green:#16845d;--red:#d94d5b}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Manrope,Arial,sans-serif}button{font:inherit;cursor:pointer}.topbar{height:76px;padding:0 max(calc((100% - 1160px)/2),28px);display:flex;align-items:center;justify-content:space-between;background:#fff;border-bottom:1px solid #edf0f5}.brand{display:flex;align-items:center;gap:11px;color:var(--ink);text-decoration:none;font-size:13px;font-weight:800;letter-spacing:1.5px}.brand small{display:block;font:500 9px 'DM Mono',monospace;color:#8a93a4;letter-spacing:1.1px;margin-top:3px}.brand-mark{width:38px;height:38px;display:grid;place-items:center;background:var(--ink);color:white;border-radius:11px;font-size:21px;font-weight:800;letter-spacing:-2px}.brand-mark span{color:var(--cyan)}.top-tag,.progress-pill{font:500 10px 'DM Mono',monospace;letter-spacing:1px;color:#697386}.live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#28b88b;margin-right:8px;box-shadow:0 0 0 4px #28b88b1a}
+main{max-width:1160px;margin:auto;padding:0 28px 80px}.hero{min-height:310px;background:#101a35;border-radius:0 0 22px 22px;display:flex;justify-content:space-between;overflow:hidden;padding:54px 70px;color:white;position:relative}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 45%,#2457e620);pointer-events:none}.eyebrow,.mode-kicker{font:500 10px 'DM Mono',monospace;letter-spacing:1.7px;color:#8b9fc9}.hero h1{font-size:43px;line-height:1.13;letter-spacing:-2px;margin:17px 0 13px}.hero h1 span{color:var(--cyan)}.hero-text{max-width:440px;color:#b8c4db;font-size:13px;line-height:1.8}.hero-meta{display:flex;align-items:center;gap:13px;margin-top:25px;color:#8292b1;font:10px 'DM Mono',monospace;letter-spacing:.5px}.hero-meta i{width:3px;height:3px;background:var(--cyan);border-radius:50%}.hero-art{width:330px;position:relative;display:grid;place-items:center}.chip{width:145px;height:145px;background:linear-gradient(145deg,#284b91,#142956);border:1px solid #6082c4;border-radius:27px;transform:rotate(-9deg);box-shadow:0 20px 50px #0006;display:grid;place-items:center;z-index:2}.chip:before,.chip:after{content:"";position:absolute;inset:-13px;border:1px dashed #5573a9;border-radius:34px}.chip-inner{width:112px;height:112px;border:1px solid #5b79b2;border-radius:19px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#14264c}.chip-inner span{font:500 10px 'DM Mono';color:#9db7eb;letter-spacing:2px}.chip-inner b{font-size:39px;color:var(--cyan);line-height:1.1}.chip-inner small{font:8px 'DM Mono';color:#8297bd;letter-spacing:1px}.orbit{position:absolute;border:1px solid #ffffff20;border-radius:50%;width:250px;height:250px}.orbit-two{width:310px;height:310px;border-style:dashed}.float-code{position:absolute;font:10px 'DM Mono';color:#83a0d7}.code-a{top:28px;right:12px}.code-b{bottom:27px;left:0;color:var(--cyan)}.spark{position:absolute;color:var(--cyan);font-size:24px}.spark-a{top:42px;left:28px}.spark-b{right:25px;bottom:36px}
+.game-shell{padding-top:43px}.section-heading{display:flex;align-items:end;justify-content:space-between;margin-bottom:20px}.section-heading h2{font-size:25px;letter-spacing:-.8px;margin:6px 0 0}.section-heading .eyebrow{color:#8290a6}.progress-pill{padding:10px 13px;background:white;border:1px solid var(--line);border-radius:30px}.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:17px}.tab{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 17px;display:flex;align-items:center;text-align:left;gap:13px;color:var(--ink);transition:.2s}.tab:hover{border-color:#a9bdf5;transform:translateY(-1px)}.tab.active{background:#edf2ff;border-color:#b8c8ff;box-shadow:inset 0 0 0 1px #dce5ff}.tab-icon{width:37px;height:37px;display:grid;place-items:center;background:#f0f3f9;color:var(--blue);font-size:20px;border-radius:10px;font-weight:800}.tab.active .tab-icon{background:var(--blue);color:white}.tab b{display:block;font-size:12px}.tab small{display:block;color:#8a94a6;font-size:10px;margin-top:4px}.tab-arrow{margin-left:auto;color:#9aa5b7;font-size:16px}.mode-panel{display:none;background:white;border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:0 8px 30px #19294b08}.mode-panel.active{display:block}.mode-intro{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}.mode-intro h3{font-size:21px;letter-spacing:-.6px;margin:7px 0 5px}.mode-intro p{font-size:12px;color:var(--muted);margin:0}.mode-kicker{color:var(--blue);font-size:9px}.stat-card{min-width:105px;padding:12px 16px;background:#f5f7fc;border:1px solid #e9edf5;border-radius:11px;text-align:center}.stat-card span,.stat-card small{display:block;font:9px 'DM Mono';color:#8792a5;letter-spacing:1px}.stat-card strong{display:block;font-size:24px;margin:2px 0;color:var(--blue)}.stat-card small{letter-spacing:0;text-transform:none}
+.crossword-layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);gap:17px}.board-card,.clues-card,.quiz-card,.hangman-card{border:1px solid var(--line);border-radius:12px;background:#fff}.board-card{padding:17px}.board-top{display:flex;justify-content:space-between;align-items:center;font:10px 'DM Mono';letter-spacing:.8px;color:#778399;margin-bottom:15px}.board-top b,.clues-title span{color:var(--blue)}.board-help{font:10px Manrope;color:#9aa3b2;letter-spacing:0}.grid-scroll{overflow:auto;padding:8px 4px 12px}.crossword-grid{display:grid;grid-template-columns:repeat(24,27px);grid-template-rows:repeat(23,27px);gap:2px;width:max-content;margin:auto}.cell{width:27px;height:27px;position:relative;background:#e9edf5;border:1px solid #dce2ed;border-radius:3px}.cell input{width:100%;height:100%;padding:0;border:0;outline:0;background:#fff;text-align:center;text-transform:uppercase;font:700 12px 'DM Mono';color:#15234a;border-radius:3px}.cell input:focus{background:#e9efff;box-shadow:inset 0 0 0 2px var(--blue)}.cell .cell-number{position:absolute;z-index:2;top:1px;left:2px;font:7px 'DM Mono';color:#65728b;pointer-events:none}.cell.correct input{background:#d9f5e9;color:#08734b}.cell.wrong input{background:#ffe2e5;color:#b82e42}.board-actions{display:flex;gap:9px;margin-top:13px}.btn{border:0;border-radius:8px;padding:11px 15px;font-size:11px;font-weight:800;transition:.2s}.btn-primary{background:var(--blue);color:white;box-shadow:0 5px 12px #2457e626}.btn-primary:hover{background:var(--blue-dark);transform:translateY(-1px)}.btn-primary:disabled{opacity:.4;cursor:not-allowed;transform:none}.btn-primary span{margin-left:12px}.btn-ghost{background:#f1f3f8;color:#69758a}.btn-ghost:hover{background:#e8ecf4}.result-line{font-size:11px;color:#788397;margin-top:13px;min-height:17px}.clues-card{padding:18px}.clues-title{display:flex;align-items:center;gap:9px;border-bottom:1px solid var(--line);padding-bottom:13px}.clues-title h4{margin:0;font-size:13px}.clues-title span{font:11px 'DM Mono'}.clue-group{margin-top:17px}.clue-group h5{font:10px 'DM Mono';letter-spacing:1px;color:#8b95a6;margin:0 0 10px}.clue-group h5 span{color:var(--blue);font-size:13px;margin-right:5px}.clue-group ol{list-style:none;margin:0;padding:0;display:grid;gap:9px}.clue-group li{display:grid;grid-template-columns:22px 1fr;gap:7px;font-size:10px;line-height:1.55;color:#68748a}.clue-group li b{font:10px 'DM Mono';color:var(--blue)}
+.quiz-card{padding:24px;max-width:760px;margin:auto}.quiz-progress{display:flex;justify-content:space-between;align-items:center;font:10px 'DM Mono';letter-spacing:.8px;color:#7c879b;margin-bottom:25px}.quiz-progress>div{width:120px;height:5px;background:#edf0f6;border-radius:10px;overflow:hidden}.quiz-progress>div span{display:block;width:12.5%;height:100%;background:var(--blue);transition:.3s}.quiz-question{font-size:19px;line-height:1.5;letter-spacing:-.4px;margin:0 0 19px}.quiz-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}.quiz-option{border:1px solid var(--line);border-radius:9px;padding:14px;text-align:left;background:#fff;color:#35415a;font-size:11px;display:flex;gap:11px;align-items:center;min-height:54px}.quiz-option:hover:not(:disabled){border-color:#9db3f7;background:#f8faff}.quiz-option .letter{width:25px;height:25px;display:grid;place-items:center;border-radius:7px;background:#f0f3f9;color:#63718a;font:11px 'DM Mono';flex-shrink:0}.quiz-option.selected{border-color:var(--blue);background:#eef3ff}.quiz-option.correct{border-color:#6ac9a4;background:#e9f8f1}.quiz-option.incorrect{border-color:#e9a0a8;background:#fff0f1}.quiz-option:disabled{cursor:default}.quiz-footer{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);margin-top:22px;padding-top:17px;gap:12px}.quiz-footer span{font-size:11px;color:#788397}.hangman-card{display:grid;grid-template-columns:.8fr 1.2fr;overflow:hidden}.hangman-visual{background:#f4f6fb;min-height:340px;display:flex;flex-direction:column;align-items:center;justify-content:center;border-right:1px solid var(--line)}.hangman-drawing{width:190px;height:190px;position:relative}.gallows{position:absolute;width:105px;height:150px;left:42px;top:8px;border-left:5px solid #9ba8bd;border-top:5px solid #9ba8bd}.gallows:before{content:"";position:absolute;width:5px;height:22px;right:0;top:0;background:#9ba8bd}.gallows:after{content:"";position:absolute;width:45px;height:5px;left:-24px;bottom:0;background:#9ba8bd}.person-head,.person-body,.person-arm,.person-leg{position:absolute;display:none;background:#2457e6}.person-head{width:28px;height:28px;border:4px solid #2457e6;border-radius:50%;background:transparent;top:30px;left:120px}.person-body{width:4px;height:49px;top:58px;left:132px}.person-arm{width:4px;height:33px;top:64px}.person-arm.left{left:120px;transform:rotate(45deg)}.person-arm.right{left:144px;transform:rotate(-45deg)}.person-leg{width:4px;height:35px;top:102px}.person-leg.left{left:122px;transform:rotate(35deg)}.person-leg.right{left:142px;transform:rotate(-35deg)}.hangman-drawing[data-wrong="1"] .person-head,.hangman-drawing[data-wrong="2"] .person-body,.hangman-drawing[data-wrong="3"] .person-arm.left,.hangman-drawing[data-wrong="4"] .person-arm.right,.hangman-drawing[data-wrong="5"] .person-leg.left,.hangman-drawing[data-wrong="6"] .person-leg.right{display:block}.hangman-visual p{font-size:11px;color:#7b879a}.hangman-play{padding:35px 30px;display:flex;flex-direction:column;align-items:center;justify-content:center}.hangman-word{display:flex;gap:7px;margin:24px 0 14px;flex-wrap:wrap;justify-content:center}.hangman-word span{width:26px;height:34px;border-bottom:2px solid #aeb8ca;text-align:center;font:700 17px 'DM Mono';color:#17234a}.hangman-hint{font-size:11px;color:#7c879b;margin:0 0 20px;text-align:center}.keyboard{display:grid;grid-template-columns:repeat(7,34px);gap:6px;justify-content:center;margin-bottom:23px}.key{height:33px;border:1px solid #e2e7f0;border-radius:6px;background:#f7f8fb;color:#4c5870;font:11px 'DM Mono'}.key:hover:not(:disabled){background:#eaf0ff;border-color:#b9c9fb}.key:disabled{opacity:.35}.hangman-play>.btn{min-width:155px}
+footer{max-width:1160px;margin:0 auto;padding:20px 28px 28px;display:flex;align-items:center;gap:10px;color:#98a1b0;font:9px 'DM Mono';letter-spacing:.8px}footer>span:last-child{margin-left:auto}.brand-mark.small{width:25px;height:25px;border-radius:7px;font-size:14px}
+@media(max-width:850px){.hero{padding:45px 38px}.hero-art{width:240px}.crossword-layout{grid-template-columns:1fr}.clues-card{display:grid;grid-template-columns:1fr 1fr;column-gap:20px}.clues-title{grid-column:1/-1}.hangman-card{grid-template-columns:1fr}.hangman-visual{border-right:0;border-bottom:1px solid var(--line);min-height:270px}}
+@media(max-width:600px){.topbar{padding:0 18px;height:65px}.top-tag{font-size:8px}main{padding:0 14px 50px}.hero{padding:36px 25px;min-height:280px}.hero h1{font-size:34px}.hero-art{position:absolute;right:-65px;opacity:.35}.hero-copy{position:relative;z-index:2}.hero-meta{font-size:8px;gap:7px;flex-wrap:wrap}.section-heading{align-items:start;gap:12px;flex-direction:column}.section-heading h2{font-size:22px}.tabs{gap:6px}.tab{padding:11px 8px;gap:7px}.tab-icon{width:29px;height:29px;font-size:16px}.tab b{font-size:10px}.tab small{font-size:8px}.tab-arrow{display:none}.mode-panel{padding:15px}.mode-intro h3{font-size:18px}.mode-intro p{max-width:230px;line-height:1.5}.stat-card{min-width:75px;padding:9px}.stat-card strong{font-size:20px}.board-card{padding:12px 8px}.crossword-grid{grid-template-columns:repeat(24,24px);grid-template-rows:repeat(23,24px)}.cell{width:24px;height:24px}.cell input{font-size:10px}.clues-card{padding:14px;grid-template-columns:1fr}.clues-title{grid-column:auto}.quiz-card{padding:15px}.quiz-question{font-size:16px}.quiz-options{grid-template-columns:1fr}.quiz-footer{align-items:flex-start;flex-direction:column}.quiz-footer .btn{width:100%}.hangman-play{padding:28px 15px}.hangman-word{gap:4px}.hangman-word span{width:21px}.keyboard{grid-template-columns:repeat(7,31px)}footer{padding:15px;font-size:7px}footer>span:last-child{display:none}}
+
+/* Identidade visual: Academia Arcana */
+:root{--ink:#261b38;--muted:#887b98;--paper:#f2edf7;--white:#fffdf9;--blue:#7041a6;--blue-dark:#512c83;--cyan:#e7c77b;--line:#e6dced;--green:#23845f;--red:#c94f69}
+body{background:radial-gradient(ellipse at 12% 8%,#e9ddf2 0,transparent 32%),radial-gradient(ellipse at 92% 38%,#f4e8d4 0,transparent 28%),var(--paper);color:var(--ink)}
+.topbar{background:#21152f;border-bottom:1px solid #49365d}.brand{color:#fff4dc}.brand small{color:#c2aecf}.brand-mark{background:linear-gradient(145deg,#a978c8,#59327f);color:#fff3d7;border:1px solid #c9a9df;border-radius:50%;font-size:23px;letter-spacing:0;box-shadow:0 0 18px #b77be455}.brand-mark span{color:var(--cyan)}.top-tag{color:#d3c0df}.live-dot{background:#d9b76d;box-shadow:0 0 0 4px #d9b76d22}
+.hero{background:radial-gradient(circle at 78% 45%,#573b70 0,#2c1d40 38%,#1d142b 78%);border:1px solid #5d4672;border-top:0;box-shadow:0 18px 40px #34204422}.hero:after{background:linear-gradient(110deg,transparent 35%,#d7b87918)}.eyebrow,.mode-kicker{color:#c6a7df}.hero h1{font-family:Cinzel,Georgia,serif;font-size:45px;letter-spacing:-1px}.hero h1 span{color:#e8c982}.hero-text{color:#d5c7df}.hero-meta{color:#b9a7c8}.hero-meta i{background:#e8c982}
+.arcane-book{width:160px;height:190px;position:relative;z-index:2;transform:rotate(-8deg);border:3px solid #d8b66f;border-radius:12px 19px 19px 12px;background:linear-gradient(100deg,#6d4389 0 12%,#39234f 13% 100%);box-shadow:inset 9px 0 0 #261733, inset 13px 0 0 #9c70b2,0 22px 45px #08040d88;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#f1d99f}.arcane-book:before{content:"";position:absolute;inset:12px;border:1px solid #d8b66f88;border-radius:5px}.arcane-book .book-rune{font-size:39px;line-height:1.1;text-shadow:0 0 18px #e7c77b}.arcane-book span{font:9px 'DM Mono';letter-spacing:2px;margin-top:10px}.arcane-book b{font:700 28px Cinzel,serif;letter-spacing:3px}.arcane-book small{font:7px 'DM Mono';letter-spacing:1px;color:#cbb4d9}.orbit{border-color:#e6c77b2b}.orbit-two{border-color:#d2b6e344}.float-code{color:#e8cb8a}.code-b{color:#d5b7e8}.spark{color:#f0d58e;text-shadow:0 0 16px #e7c77b}
+.section-heading h2,.mode-intro h3,.clues-title h4{font-family:Cinzel,Georgia,serif}.section-heading .eyebrow{color:#8b6aa6}.progress-pill{background:#fffaf2;border-color:#e4d5e9;color:#80678f}.tabs{gap:12px}.tab{background:#fffdf9;border-color:#e3d6e9;box-shadow:0 5px 16px #39244a0a}.tab:hover{border-color:#b89bcf}.tab.active{background:#eee3f6;border-color:#b99bcf;box-shadow:inset 0 0 0 1px #dfcbe9,0 5px 18px #58377812}.tab-icon{background:#f0e8f4;color:#7041a6}.tab.active .tab-icon{background:linear-gradient(145deg,#8b5bb2,#56327e);color:#fff1d2}.tab small{color:#8e8098}.mode-panel{background:#fffdf9;border-color:#e5d9e9;box-shadow:0 12px 35px #2c1d4010}.mode-kicker{color:#8154a2}.stat-card{background:#f7f0f8;border-color:#e9dced}.stat-card strong{color:#7041a6}
+.board-card,.clues-card,.quiz-card,.hangman-card{background:#fffdf9;border-color:#e7dbea}.board-card,.clues-card,.quiz-card{box-shadow:inset 0 1px #fff}.board-top{color:#806f8e}.board-top b,.clues-title span,.clue-group h5 span,.clue-group li b{color:#8051a3}.cell{background:#eee6f1;border-color:#dfd2e6}.cell input{color:#352047;background:#fffdfa}.cell input:focus{background:#f3eafa;box-shadow:inset 0 0 0 2px #8b5bb2}.cell.correct input{background:#dff3e9;color:#176947}.cell.wrong input{background:#ffe5e9;color:#a52d4a}.btn{border-radius:7px}.btn-primary{background:linear-gradient(135deg,#8655ad,#59347f);box-shadow:0 5px 14px #7041a633;color:#fff8e9}.btn-primary:hover{background:linear-gradient(135deg,#70439a,#48276d)}.btn-ghost{background:#f2eaf4;color:#6f5b7c}.btn-ghost:hover{background:#e9ddef}.result-line,.clue-group li{color:#786b83}.clues-title{border-color:#eadfed}.clue-group h5{color:#907f9c}
+.quiz-progress{color:#806f8e}.quiz-progress>div{background:#eee5f2}.quiz-progress>div span{background:linear-gradient(90deg,#a779c5,#d8b66f)}.quiz-option{border-color:#e7dbea;color:#493858;background:#fffdfa}.quiz-option:hover:not(:disabled){border-color:#b99bcf;background:#faf5fc}.quiz-option .letter{background:#f1e9f4;color:#79569a}.quiz-option.selected{border-color:#8e61ad;background:#f3eafa}.quiz-option.correct{border-color:#78c6a1;background:#e9f8f0}.quiz-option.incorrect{border-color:#e3a0ad;background:#fff0f2}.quiz-footer{border-color:#eadfed}.quiz-footer span{color:#796b84}
+.hangman-visual{background:radial-gradient(circle,#f3e9f7,#e9deef);border-color:#e7dbea}.gallows{border-color:#9a7caf}.gallows:before,.gallows:after{background:#9a7caf}.person-head{border-color:#8051a3}.person-body,.person-arm,.person-leg{background:#8051a3}.hangman-word span{border-color:#bda8c9;color:#39254d}.hangman-hint{color:#806f8e}.key{border-color:#e5d9e9;background:#faf6fb;color:#574366}.key:hover:not(:disabled){background:#f0e5f6;border-color:#b99bcf}.quiz-question{color:#342343}
+footer{color:#887b98}.brand-mark.small{background:linear-gradient(145deg,#a978c8,#59327f);color:#fff1d2}
+@media(max-width:600px){.hero h1{font-size:35px}.arcane-book{transform:scale(.82) rotate(-8deg)}}
+
+/* Refinamento visual: Academia Arcana */
+:root{
+  --ink:#2b2038;--muted:#82758d;--paper:#eee8f1;--white:#fffaf2;
+  --blue:#70439a;--blue-dark:#4c2b70;--cyan:#e5c77e;--line:#e4d8e7;
+  --green:#237a58;--red:#bd4c63;
+}
+html{scroll-behavior:smooth}
+body{
+  min-height:100vh;
+  background:
+    radial-gradient(ellipse at 8% 15%,rgba(183,145,207,.22),transparent 32%),
+    radial-gradient(ellipse at 93% 52%,rgba(214,183,119,.18),transparent 30%),
+    linear-gradient(135deg,#f3edf4,#eee8f1 48%,#f5efe8);
+}
+.topbar{
+  height:82px;padding-inline:max(calc((100% - 1200px)/2),32px);
+  background:linear-gradient(105deg,#21152f,#30203f 58%,#24172f);
+  border-bottom:1px solid rgba(224,193,128,.35);
+  box-shadow:0 8px 28px rgba(28,16,39,.2);
+}
+.brand{font-family:Cinzel,Georgia,serif;font-size:14px;letter-spacing:1.8px}
+.brand-mark{width:43px;height:43px;border-radius:13px 13px 13px 4px;font-size:24px;box-shadow:0 0 0 4px rgba(219,190,132,.08),0 5px 18px #0b061555}
+.top-tag{padding:10px 14px;border:1px solid #715a7d;border-radius:99px;background:#ffffff08;font-size:9px;letter-spacing:1.25px}
+main{max-width:1200px;padding-inline:30px}
+.hero{
+  min-height:365px;padding:62px 76px;border-radius:0 0 28px 28px;
+  background:radial-gradient(ellipse at 76% 48%,#63457a 0,#39264d 36%,#21162f 76%);
+  border:1px solid #735982;border-top:0;box-shadow:0 22px 50px rgba(46,27,61,.2);
+}
+.hero:before{content:"";position:absolute;inset:13px;border:1px solid rgba(224,195,132,.22);border-radius:0 0 19px 19px;pointer-events:none}
+.hero:after{content:"✧     ·       ✦       ·       ✧";position:absolute;right:34%;top:28px;color:#f0d99b55;font-size:17px;letter-spacing:25px;background:none;pointer-events:none}
+.hero-copy{position:relative;z-index:3;max-width:550px}
+.hero .eyebrow{color:#e0c58c;font-size:10px;letter-spacing:2.3px}
+.hero h1{font-size:53px;line-height:1.08;margin:19px 0 17px;text-shadow:0 4px 25px #09041055}
+.hero h1 span{color:#f0d28d;text-shadow:0 0 28px #e8c77a55}
+.hero-text{font-size:14px;line-height:1.9;max-width:490px;color:#e0d4e8}
+.hero-meta{margin-top:29px;gap:16px;color:#c4b1d0;font-size:9px;letter-spacing:1px}
+.hero-art{width:370px;min-width:300px}
+.arcane-book{width:178px;height:215px;border-width:2px;border-radius:10px 18px 18px 10px;box-shadow:inset 10px 0 0 #24162f,inset 14px 0 0 #a57bb6,0 28px 55px #090410aa,0 0 35px #d7b36b22;transform:rotate(-7deg)}
+.arcane-book:before{inset:13px;border-color:#e3c67c99}
+.book-rune{font-size:48px!important;color:#f3d997}
+.arcane-book b{font-size:32px}
+.orbit{width:270px;height:270px;border-color:#e8d39b35}
+.orbit-two{width:340px;height:340px;border-color:#d7b9e044}
+.float-code{font-size:9px;letter-spacing:1.4px}
+.spark{font-size:27px}
+.game-shell{padding-top:58px}
+.section-heading{margin-bottom:25px}
+.section-heading h2{font-size:29px;color:#352342;letter-spacing:.1px}
+.section-heading .eyebrow{letter-spacing:2px;color:#9677a7}
+.progress-pill{padding:11px 15px;border:1px solid #e4d5e9;border-radius:99px;background:#fffaf4;box-shadow:0 4px 15px #39244a0a;font-size:9px}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px}
+.tab{min-height:82px;padding:14px 17px;border:1px solid #e1d3e7;border-radius:13px;box-shadow:0 7px 20px rgba(55,34,69,.06);transition:transform .2s,box-shadow .2s,border-color .2s}
+.tab:hover{transform:translateY(-2px);box-shadow:0 12px 24px #39244a12}
+.tab.active{border-color:#b99acb;background:linear-gradient(135deg,#f6eff9,#eee3f4);box-shadow:inset 0 0 0 1px #e4d2ed,0 9px 22px #5c3b7414}
+.tab-icon{width:39px;height:39px;border-radius:11px;font-size:20px}
+.tab b{font-family:Cinzel,Georgia,serif;font-size:13px;color:#392849}
+.tab small{font-size:10px;margin-top:4px}
+.tab-arrow{font-size:18px;color:#a58ab4}
+.mode-panel{padding:27px;border:1px solid #e5d9e9;border-radius:17px;box-shadow:0 18px 45px rgba(49,29,64,.08);background:rgba(255,250,244,.96)}
+.mode-intro{padding-bottom:23px;margin-bottom:23px;border-bottom:1px solid #eee4ef}
+.mode-intro h3{font-size:23px;color:#392849;margin:7px 0 6px}
+.mode-intro p{font-size:12px;color:#85778e;line-height:1.7}
+.mode-kicker{font-size:9px;letter-spacing:1.8px;color:#9878aa}
+.stat-card{min-width:112px;padding:13px 17px;border-radius:12px;background:linear-gradient(145deg,#f7f0f8,#f1e8f3);border:1px solid #e7d9eb}
+.stat-card span{font-size:8px;letter-spacing:1.2px;color:#9a86a3}
+.stat-card strong{font-family:Cinzel,Georgia,serif;font-size:28px;color:#69418a}
+.stat-card small{font-size:9px;color:#8c7b94}
+.crossword-layout{gap:18px}
+.board-card,.clues-card,.quiz-card,.hangman-card{border-radius:13px;border:1px solid #e9deeb;box-shadow:0 5px 18px rgba(49,29,64,.035)}
+.board-card{padding:19px;background:linear-gradient(145deg,#fffdf9,#fbf6ef)}
+.board-top{padding-bottom:14px;margin-bottom:16px;border-bottom:1px solid #eee4e8;font-size:9px;letter-spacing:1.2px}
+.board-help{font-size:9px;color:#a091a7}
+.crossword-grid{gap:2px}
+.cell{border:1px solid #d9c9df;border-radius:3px;background:#e9deed;overflow:visible}
+.cell input{font-family:'DM Mono',monospace;font-weight:600;font-size:12px;border-radius:2px;color:#392849}
+.cell.correct{border-color:#6db895;background:#dff1e7}
+.cell.wrong{border-color:#dc8b9a;background:#fbe5e9}
+.board-actions{gap:10px;margin-top:18px}
+.btn{min-height:40px;padding:0 16px;border-radius:8px;font-size:10px;font-weight:800;letter-spacing:.25px;transition:transform .15s,box-shadow .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:linear-gradient(135deg,#8051a4,#553174);box-shadow:0 5px 13px #65408235;color:#fff9e9}
+.btn-primary:hover{box-shadow:0 8px 18px #65408245}
+.btn-ghost{border:1px solid #e7dbea;background:#f5eef6;color:#705b7d}
+.result-line{padding-top:12px;font-size:10px;line-height:1.6}
+.clues-card{padding:20px;background:#fffcf7}
+.clues-title{padding-bottom:13px;border-bottom:1px solid #eee4e8}
+.clues-title h4{font-size:15px;color:#3d2b4b}
+.clue-group{margin-top:17px}
+.clue-group h5{font-size:9px;letter-spacing:1.3px;color:#8c7898}
+.clue-group h5 span{display:inline-grid;place-items:center;width:23px;height:23px;margin-right:5px;border-radius:7px;background:#f1e8f4;color:#765092}
+.clue-group li{font-size:10px;line-height:1.7;padding:5px 0 5px 2px}
+.clue-group li b{color:#79529a}
+.quiz-card{padding:26px;background:linear-gradient(145deg,#fffdf9,#fcf7f0)}
+.quiz-progress{font-size:9px;letter-spacing:1.3px}
+.quiz-progress>div{height:6px;border-radius:99px;margin-top:11px;background:#eee5f0;overflow:hidden}
+.quiz-progress>div span{border-radius:99px}
+.quiz-question{font-family:Cinzel,Georgia,serif;font-size:21px;line-height:1.5;color:#382648}
+.quiz-options{gap:11px}
+.quiz-option{border-radius:10px;padding:13px;border-color:#e8dce9;font-size:11px;transition:.15s}
+.quiz-option .letter{border-radius:8px;width:29px;height:29px}
+.quiz-footer{padding-top:20px;margin-top:25px}
+.quiz-footer span{font-size:10px;line-height:1.6}
+.hangman-card{grid-template-columns:.9fr 1.1fr;overflow:hidden;background:#fffdf9}
+.hangman-visual{min-height:365px;background:radial-gradient(circle at 50% 43%,#f5eaf7,#eee3f1 65%,#e8dced);border-right:1px solid #e8dcea}
+.hangman-drawing{filter:drop-shadow(0 5px 8px #60427820)}
+.gallows{border-color:#9b7eaa}
+.gallows:before,.gallows:after{background:#9b7eaa}
+.person-head{border-color:#8051a3}.person-body,.person-arm,.person-leg{background:#8051a3}
+.hangman-visual p{font-size:10px;color:#887491}
+.hangman-play{padding:40px 30px}
+.hangman-word{gap:8px;margin:27px 0 16px}
+.hangman-word span{width:29px;height:38px;border-bottom:2px solid #b49ac1;font-size:18px;color:#432b56}
+.hangman-hint{font-size:11px;color:#887691;line-height:1.6}
+.keyboard{gap:7px;margin:3px 0 25px}
+.key{height:36px;border-radius:8px;background:#f8f2f8;border-color:#e8dce9;font-weight:700}
+.key:hover:not(:disabled){background:#eee2f4;border-color:#b99bcf}
+footer{max-width:1200px;padding:26px 30px 34px;color:#8e7c98;font-size:9px;letter-spacing:1.1px}
+footer .brand-mark.small{width:29px;height:29px}
+@media(max-width:850px){.hero{padding:48px 42px}.hero-art{width:280px;min-width:240px}.mode-panel{padding:20px}}
+@media(max-width:600px){
+ .topbar{padding:0 16px;height:68px}.top-tag{font-size:7px;padding:8px}.brand{font-size:11px}.brand small{font-size:7px}
+ main{padding:0 13px 45px}.hero{padding:38px 25px;min-height:300px;border-radius:0 0 20px 20px}.hero:before{inset:8px}.hero h1{font-size:37px}.hero-text{font-size:12px;max-width:290px}.hero-art{right:-75px;opacity:.3}.hero-meta{font-size:7px;gap:7px}
+ .game-shell{padding-top:39px}.section-heading h2{font-size:23px}.tabs{gap:6px}.tab{min-height:69px;padding:9px 6px;gap:6px;border-radius:10px}.tab-icon{width:29px;height:29px;font-size:15px}.tab b{font-size:9px}.tab small{font-size:7px}.tab-arrow{display:none}
+ .mode-panel{padding:14px;border-radius:13px}.mode-intro{gap:8px}.mode-intro h3{font-size:17px}.mode-intro p{font-size:10px;max-width:225px}.stat-card{min-width:68px;padding:8px}.stat-card strong{font-size:21px}.board-card{padding:12px 8px}.crossword-grid{grid-template-columns:repeat(24,24px);grid-template-rows:repeat(23,24px)}.cell{width:24px;height:24px}.cell input{font-size:10px}.clues-card{padding:14px;grid-template-columns:1fr}.clues-title{grid-column:auto}.quiz-card{padding:15px}.quiz-question{font-size:16px}.quiz-options{grid-template-columns:1fr}.quiz-footer{align-items:flex-start;flex-direction:column}.quiz-footer .btn{width:100%}.hangman-card{grid-template-columns:1fr}.hangman-visual{min-height:250px;border-right:0;border-bottom:1px solid #e8dcea}.hangman-play{padding:27px 12px}.hangman-word{gap:4px}.hangman-word span{width:21px}.keyboard{grid-template-columns:repeat(7,31px)}footer{padding:16px;font-size:7px}footer>span:last-child{display:none}
+}
+
+/* =========================================
+   REFINO DAS PROVAS: CRUZADINHA E FORCA
+   ========================================= */
+
+/* Cruzadinha: tabuleiro compacto, legível e com casas bloqueadas visíveis. */
+#crossword .crossword-layout{grid-template-columns:minmax(0,1.45fr) minmax(285px,.75fr);align-items:stretch;gap:19px}
+#crossword .board-card{padding:21px;background:linear-gradient(150deg,#fffdf8 0%,#faf3e9 100%);border:1px solid #e5d6c2;box-shadow:0 12px 30px rgba(49,29,64,.055)}
+#crossword .board-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 0 16px;margin:0 0 13px;border-bottom:1px solid #eee2d4;color:#4b365a;letter-spacing:0}
+#crossword .board-top>div:first-child{display:flex;align-items:center;gap:11px}
+#crossword .board-index{display:grid;place-items:center;width:37px;height:37px;border-radius:11px 11px 11px 3px;background:linear-gradient(145deg,#825aa0,#55336f);color:#fff5df;font:700 13px Cinzel,Georgia,serif;box-shadow:0 5px 12px #59366e30}
+#crossword .board-top b{display:block;color:#493352;font:700 12px Cinzel,Georgia,serif;letter-spacing:.8px}
+#crossword .board-top small{display:block;margin-top:4px;color:#9a8a9e;font-size:9px;letter-spacing:0}
+#crossword .board-counter{display:flex;flex-direction:column;align-items:flex-end;gap:2px;white-space:nowrap}
+#crossword .board-counter strong{font:700 17px Cinzel,Georgia,serif;color:#684187}
+#crossword .board-counter span{font:8px 'DM Mono',monospace;color:#a18fa6;text-transform:uppercase;letter-spacing:1px}
+#crossword .crossword-progress{height:5px;overflow:hidden;border-radius:99px;background:#eee5eb;margin:0 0 15px}
+#crossword .crossword-progress span{display:block;width:0;height:100%;border-radius:inherit;background:linear-gradient(90deg,#986ab3,#d2a866);transition:width .25s ease}
+#crossword .board-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}
+#crossword .board-controls>span{font-size:9px;color:#95879b}
+#crossword .direction-switch{display:flex;gap:4px;padding:3px;border:1px solid #e9dce8;border-radius:9px;background:#f5edf4}
+#crossword .direction-btn{border:0;border-radius:6px;padding:7px 10px;background:transparent;color:#8b7b94;font-size:9px;font-weight:800;transition:.18s}
+#crossword .direction-btn.active{background:#684187;color:#fff8ed;box-shadow:0 3px 7px #68418730}
+#crossword .grid-scroll{position:relative;overflow:auto;padding:15px 12px 17px;border:1px solid #e4d8e8;border-radius:12px;background:radial-gradient(circle at 50% 30%,#fffdf9,#f5edf4 100%);box-shadow:inset 0 1px 5px #563b6310;overscroll-behavior-x:contain;scrollbar-color:#c5accd #f3eaf2;scrollbar-width:thin}
+#crossword .crossword-grid{--crossword-cell-size:clamp(23px,2.55vw,29px);gap:3px;width:max-content;margin:0 auto}
+#crossword .cell{width:var(--crossword-cell-size);height:var(--crossword-cell-size);border:1px solid #d9c8df;border-radius:5px;background:#fffdf8;box-shadow:0 1px 1px #4e31500d;overflow:visible;transition:background .15s,border-color .15s,transform .15s}
+#crossword .cell.blocked{border:1px solid #593b68;background:linear-gradient(145deg,#553764,#3c294a);border-radius:4px;box-shadow:inset 0 1px #ffffff14,0 1px 2px #38244620}
+#crossword .cell input{position:relative;z-index:1;width:100%;height:100%;padding:4px 0 0;border:0;border-radius:4px;outline:0;background:transparent;color:#392849;text-align:center;text-transform:uppercase;font:700 12px 'DM Mono',monospace;caret-color:#8657a6}
+#crossword .cell .cell-number{z-index:2;top:1px;left:3px;font:600 7px 'DM Mono',monospace;color:#9b83a7;line-height:1;pointer-events:none}
+#crossword .cell:focus-within{z-index:3;transform:scale(1.07);border-color:#8a5ba4;box-shadow:0 0 0 2px #8a5ba426,0 4px 10px #5c3b6b20}
+#crossword .cell.in-word{border-color:#c3a46a;background:#f7edcf;box-shadow:inset 0 0 0 1px #e9d49e}
+#crossword .cell.in-word input{color:#543c2f}
+#crossword .cell.word-start{border-color:#a77b43;background:#f0dcae}
+#crossword .cell.word-start .cell-number{color:#67421f;font-weight:800}
+#crossword .cell.correct{border-color:#69aa83;background:#dff2e5;box-shadow:inset 0 0 0 1px #b4ddc1}
+#crossword .cell.correct input{color:#176947;background:transparent}
+#crossword .cell.wrong{border-color:#d77d8d;background:#fae0e5;box-shadow:inset 0 0 0 1px #efc0c8}
+#crossword .cell.wrong input{color:#a52d4a;background:transparent}
+#crossword .board-legend{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:12px 1px 0;color:#97889c;font-size:8px}
+#crossword .board-legend span{display:inline-flex;align-items:center;gap:5px}
+#crossword .board-legend i{display:inline-block;width:9px;height:9px;border-radius:2px;border:1px solid #d9c8df;background:#fffdf8}
+#crossword .board-legend .legend-block{background:#4a3158;border-color:#4a3158}
+#crossword .board-legend .legend-selected{background:#f0dcae;border-color:#c3a46a}
+#crossword .board-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:17px}
+#crossword .board-actions .btn{min-height:41px}
+#crossword .result-line{min-height:35px;margin-top:11px;padding:9px 11px;border-radius:8px;background:#f5eff6;color:#806e89;font-size:9px;line-height:1.6}
+#crossword .result-line.success{background:#eaf5ed;color:#28734d}
+#crossword .result-line.needs-work{background:#f8f0e7;color:#85633b}
+#crossword .clues-card{padding:20px 17px;background:linear-gradient(160deg,#fffdf9,#fbf5ed);border:1px solid #e8dccb;box-shadow:0 12px 30px rgba(49,29,64,.045)}
+#crossword .clues-title{display:flex;align-items:center;gap:11px;padding-bottom:15px;border-bottom:1px solid #eee3d9}
+#crossword .clues-emblem{display:grid;place-items:center;width:35px;height:35px;border-radius:50%;background:#f1e7f3;color:#8051a3;font-size:19px}
+#crossword .clues-title h4{margin:0;color:#493352;font:700 14px Cinzel,Georgia,serif}
+#crossword .clues-title small{display:block;margin-top:4px;color:#9a8a9e;font-size:8px}
+#crossword .clue-group{margin-top:14px}
+#crossword .clue-group h5{display:flex;align-items:center;gap:7px;margin:0 0 8px;color:#987e9e;font:700 8px 'DM Mono',monospace;letter-spacing:1.4px}
+#crossword .clue-group h5 span{display:grid;place-items:center;width:21px;height:21px;margin:0;border-radius:6px;background:#f0e7f3;color:#765092;font-size:12px}
+#crossword .clue-group ol{display:grid;gap:5px}
+#crossword .clue-item{display:block;padding:0;border:1px solid transparent;border-radius:8px;transition:background .15s,border-color .15s}
+#crossword .clue-button{display:grid;width:100%;grid-template-columns:27px 1fr 16px;align-items:start;gap:7px;padding:8px 7px;border:0;border-radius:7px;background:transparent;text-align:left;color:#74687d;cursor:pointer}
+#crossword .clue-button:hover{background:#f7f0f6}
+#crossword .clue-number{display:grid;place-items:center;min-height:22px;border-radius:6px;background:#f0e8f2;color:#795394;font:700 8px 'DM Mono',monospace}
+#crossword .clue-text{font-size:9px;line-height:1.55}
+#crossword .clue-status{padding-top:3px;color:#b6a5bc;font:12px 'DM Mono',monospace;text-align:center}
+#crossword .clue-item.active{border-color:#e5d5e9;background:#f6edf7}
+#crossword .clue-item.active .clue-button{background:transparent}
+#crossword .clue-item.active .clue-number{background:#70478c;color:#fff}
+#crossword .clue-item.solved .clue-text{color:#3c7c59}
+#crossword .clue-item.solved .clue-number{background:#e2f2e7;color:#347b52}
+#crossword .clue-item.solved .clue-status{color:#38885b;font-weight:800}
+
+/* Forca: ilustração vetorial cumulativa e estado das tentativas. */
+#hangman .hangman-card{display:grid;grid-template-columns:minmax(300px,.9fr) minmax(0,1.1fr);overflow:hidden;border:1px solid #e5d7e9;border-radius:15px;background:#fffdf9;box-shadow:0 12px 32px rgba(49,29,64,.055)}
+#hangman .hangman-visual{min-height:440px;padding:27px 24px 21px;background:radial-gradient(ellipse at 50% 42%,#fff8ec 0%,#f2e8f4 58%,#e9dced 100%);border-right:1px solid #e7d9e9;display:flex;flex-direction:column;align-items:center;justify-content:center}
+#hangman .hangman-scene{width:min(100%,330px);padding:14px 16px 13px;border:1px solid #e6d6e8;border-radius:14px;background:rgba(255,253,249,.72);box-shadow:0 8px 25px #573b6b0c}
+#hangman .hangman-scene-top{display:flex;align-items:center;justify-content:space-between;gap:8px;color:#9a85a3;font:8px 'DM Mono',monospace;letter-spacing:1px}
+#hangman #hangman-mistakes{color:#765092;white-space:nowrap}
+#hangman .hangman-drawing{display:block;width:100%;max-width:250px;height:auto;margin:8px auto 2px;overflow:visible;filter:drop-shadow(0 4px 5px #4e315018)}
+#hangman .gallows-lines{filter:drop-shadow(0 2px 1px #76563824)}
+#hangman .rope-line{stroke:#a98961}
+#hangman .hangman-part{opacity:0;visibility:hidden;transition:opacity .2s ease,visibility .2s ease}
+#hangman .hangman-part.visible{opacity:1;visibility:visible}
+#hangman .mistake-track{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:2px}
+#hangman .mistake-track span{height:5px;border-radius:99px;background:#e9dfea;transition:background .2s,transform .2s}
+#hangman .mistake-track span.used{background:linear-gradient(90deg,#9b6ab0,#6f438b);transform:scaleY(1.2)}
+#hangman .hangman-status{min-height:34px;max-width:320px;margin:15px 0 0;color:#81718d;font-size:10px;line-height:1.6;text-align:center}
+#hangman .hangman-status.success{color:#347b55;font-weight:800}
+#hangman .hangman-status.failure{color:#ae4b5d;font-weight:800}
+#hangman .hangman-play{min-width:0;padding:35px clamp(19px,4vw,48px);display:flex;flex-direction:column;align-items:center;justify-content:center}
+#hangman .hangman-play>.mode-kicker{color:#9874a7;letter-spacing:1.7px}
+#hangman .hangman-word{width:100%;display:flex;justify-content:center;align-items:flex-end;flex-wrap:wrap;gap:7px;margin:28px 0 17px}
+#hangman .hangman-letter{display:grid;place-items:center;width:31px;height:42px;border-bottom:3px solid #bda5c8;color:#4a315b;font:700 19px 'DM Mono',monospace;transition:color .2s,border-color .2s}
+#hangman .hangman-letter.revealed{border-color:#8051a3;color:#56366e}
+#hangman .hangman-word.long-word{gap:4px;margin-top:22px}
+#hangman .hangman-word.long-word .hangman-letter{width:24px;height:35px;font-size:14px}
+#hangman .hangman-hint{max-width:460px;margin:0 0 21px;color:#8a7a91;font-size:10px;line-height:1.65;text-align:center}
+#hangman .hangman-guesses{width:100%;max-width:470px;min-height:48px;padding:10px 12px;border:1px solid #ecdfed;border-radius:9px;background:#fcf7fc}
+#hangman .hangman-guesses>span{display:block;margin-bottom:6px;color:#a18da8;font:8px 'DM Mono',monospace;letter-spacing:1px}
+#hangman-guessed{display:flex;flex-wrap:wrap;gap:5px;align-items:center;color:#a18da8;font-size:9px}
+#hangman .guess-chip{display:grid;place-items:center;width:22px;height:22px;border-radius:6px;font:700 9px 'DM Mono',monospace}
+#hangman .guess-chip.hit{background:#e3f2e8;color:#347b55}
+#hangman .guess-chip.miss{background:#f8e6e9;color:#aa4b5d}
+#hangman .keyboard-title{width:100%;max-width:470px;margin:19px 0 9px;color:#a18da8;font:8px 'DM Mono',monospace;letter-spacing:1px}
+#hangman .keyboard{width:100%;max-width:470px;display:grid;grid-template-columns:repeat(7,minmax(28px,1fr));gap:6px;margin:0 0 23px}
+#hangman .key{height:37px;border:1px solid #e7d9e9;border-radius:8px;background:#fbf6fb;color:#5f496d;font:700 11px 'DM Mono',monospace;box-shadow:0 2px 3px #563b6b08;transition:transform .12s,background .12s,border-color .12s}
+#hangman .key:hover:not(:disabled){transform:translateY(-2px);border-color:#b99bcf;background:#f0e5f6}
+#hangman .key:disabled{opacity:1;cursor:default}
+#hangman .key.hit{border-color:#b7d9c2;background:#e4f3e8;color:#347b55}
+#hangman .key.miss{border-color:#ecc4cc;background:#f8e7ea;color:#b05a68}
+#hangman #new-hangman{min-width:190px}
+
+@media(max-width:900px){
+  #crossword .crossword-layout{grid-template-columns:1fr}
+  #crossword .clues-card{display:grid;grid-template-columns:1fr 1fr;column-gap:18px}
+  #crossword .clues-title{grid-column:1/-1}
+  #crossword .clue-group{min-width:0}
+  #crossword .clue-group ol{max-height:360px;overflow-y:auto;padding-right:4px;scrollbar-width:thin;scrollbar-color:#c5accd transparent}
+  #hangman .hangman-card{grid-template-columns:1fr 1fr}
+  #hangman .hangman-visual{min-height:400px}
+}
+@media(max-width:640px){
+  #crossword .board-card{padding:14px 10px}
+  #crossword .board-top small{max-width:150px;line-height:1.4}
+  #crossword .board-counter strong{font-size:15px}
+  #crossword .board-controls{align-items:flex-start;flex-direction:column;gap:7px}
+  #crossword .crossword-grid{--crossword-cell-size:23px;gap:2px}
+  #crossword .cell{border-radius:3px}
+  #crossword .cell input{font-size:10px}
+  #crossword .cell .cell-number{font-size:6px;left:2px}
+  #crossword .grid-scroll{padding:10px 7px 12px}
+  #crossword .board-legend{gap:8px;font-size:7px}
+  #crossword .board-actions{display:grid;grid-template-columns:1fr}
+  #crossword .board-actions .btn{width:100%}
+  #crossword .clues-card{grid-template-columns:1fr;padding:15px 12px}
+  #crossword .clues-title{grid-column:auto}
+  #crossword .clue-group ol{max-height:260px}
+  #hangman .hangman-card{grid-template-columns:1fr}
+  #hangman .hangman-visual{min-height:0;padding:20px 14px 14px;border-right:0;border-bottom:1px solid #e7d9e9}
+  #hangman .hangman-scene{max-width:300px}
+  #hangman .hangman-drawing{max-width:210px}
+  #hangman .hangman-status{margin-top:10px;min-height:25px}
+  #hangman .hangman-play{padding:28px 14px}
+  #hangman .hangman-word{gap:5px;margin:22px 0 15px}
+  #hangman .hangman-letter{width:25px;height:35px;font-size:15px}
+  #hangman .hangman-word.long-word{gap:3px}
+  #hangman .hangman-word.long-word .hangman-letter{width:19px;height:31px;font-size:11px}
+  #hangman .keyboard{gap:5px}
+  #hangman .key{height:35px}
+}
+/* Casas indisponíveis em tom suave: a estrutura aparece sem dominar o tabuleiro. */
+#crossword .cell.blocked{border-color:#e5d9e8;background:linear-gradient(145deg,#eee6f0,#e8deeb);box-shadow:inset 0 1px #ffffff80,0 1px 1px #4e315008}
+#crossword .board-legend .legend-block{background:#e8deeb;border-color:#e0d3e5}
+
+
+/* TEMA DARK: azul-grafite, aço e ciano. */
+:root{
+  --ink:#e8eef7;--muted:#9aabc1;--paper:#080f1b;--white:#111d2c;
+  --blue:#4c9cff;--blue-dark:#2878df;--cyan:#52dfc9;--line:#26384e;
+  --green:#54d6a0;--red:#ff7184;
+}
+html{background:#080f1b;color-scheme:dark}
+body{
+  color:#e8eef7;
+  background:
+    radial-gradient(ellipse at 8% 8%,rgba(37,91,133,.23),transparent 34%),
+    radial-gradient(ellipse at 90% 44%,rgba(25,112,113,.13),transparent 31%),
+    linear-gradient(135deg,#080f1b,#0b1422 54%,#0a1724);
+}
+.topbar{
+  background:linear-gradient(105deg,#080f1b,#101d2d 58%,#0a1725);
+  border-bottom:1px solid #263d53;box-shadow:0 8px 28px #0005;
+}
+.brand{color:#edf5ff}.brand small{color:#7f94ac}
+.brand-mark{background:linear-gradient(145deg,#1d536a,#14283f);border:1px solid #397b91;color:#d9fff9;box-shadow:0 0 0 4px #52dfc910,0 5px 18px #0006}
+.brand-mark span{color:var(--cyan)}
+.top-tag{color:#9db5cb;border-color:#30475e;background:#ffffff05}
+.live-dot{background:var(--cyan);box-shadow:0 0 0 4px #52dfc91c}
+.hero{
+  background:radial-gradient(ellipse at 77% 45%,#183b53 0,#12283e 39%,#0a1423 78%);
+  border:1px solid #31536c;border-top:0;box-shadow:0 22px 50px #0005;
+}
+.hero:before{border-color:#52dfc92a}
+.hero:after{color:#7edbc955}
+.hero .eyebrow{color:#78cdbf}
+.hero h1 span{color:#62e2ce;text-shadow:0 0 28px #52dfc933}
+.hero-text{color:#b7c9dc}.hero-meta{color:#8da8c1}.hero-meta i{background:var(--cyan)}
+.arcane-book{
+  background:linear-gradient(100deg,#173e52 0 12%,#10283e 13% 100%);
+  border-color:#65c9c4;color:#d9fff9;
+  box-shadow:inset 9px 0 0 #0b1a2a,inset 13px 0 0 #3e91a0,0 28px 55px #0009,0 0 35px #52dfc91b;
+}
+.arcane-book:before{border-color:#68cfc477}.book-rune{color:#79ebda;text-shadow:0 0 18px #52dfc955}
+.arcane-book small{color:#8bb9c5}
+.orbit{border-color:#58d9cf2b}.orbit-two{border-color:#8faecc30}
+.float-code{color:#8fbed1}.code-b{color:#69dccc}.spark{color:#77e6d5;text-shadow:0 0 16px #52dfc955}
+.game-shell{color:#e8eef7}
+.section-heading h2{color:#edf4fc}.section-heading .eyebrow{color:#7295b1}
+.progress-pill{background:#111f30;border-color:#2b4259;color:#a6bbcf;box-shadow:0 4px 15px #0003}
+.tabs{gap:14px}
+.tab{background:#111e2e;border-color:#293d53;color:#e6edf6;box-shadow:0 7px 20px #0003}
+.tab:hover{border-color:#4a8297;box-shadow:0 12px 24px #0005}
+.tab.active{border-color:#3d9b9a;background:linear-gradient(135deg,#153449,#122638);box-shadow:inset 0 0 0 1px #28596a,0 9px 22px #0004}
+.tab-icon{background:#192b40;color:#64d9d0}.tab.active .tab-icon{background:linear-gradient(145deg,#287e8a,#15556d);color:#eafffc}
+.tab b{color:#edf4fc}.tab small{color:#8ea3b9}.tab-arrow{color:#6e8aa5}
+.mode-panel{background:linear-gradient(145deg,#101c2b,#0e1927);border-color:#293d52;box-shadow:0 18px 45px #0004}
+.mode-intro{border-color:#26394d}
+.mode-intro h3{color:#eaf2fb}.mode-intro p{color:#9caec2}
+.mode-kicker{color:#65c8c5}
+.stat-card{background:linear-gradient(145deg,#17283a,#122234);border-color:#2d465d}
+.stat-card span,.stat-card small{color:#8aa3ba}.stat-card strong{color:#62dece}
+.board-card,.clues-card,.quiz-card,.hangman-card{background:#111f30;border-color:#293f56;box-shadow:0 5px 18px #0003}
+/* Cruzadinha: menos altura vazia, grade mais compacta e contraste noturno. */
+#crossword .crossword-layout{grid-template-columns:minmax(0,1.35fr) minmax(290px,.8fr);gap:18px;align-items:start}
+#crossword .board-card{padding:20px;background:linear-gradient(145deg,#111f30,#0e1a29);border-color:#2d4359;box-shadow:0 12px 30px #0004}
+#crossword .board-top{border-color:#293e53;color:#c4d2e0}
+#crossword .board-index{background:linear-gradient(145deg,#277c8a,#17485f);color:#e8fffb;box-shadow:0 5px 12px #0004}
+#crossword .board-top b{color:#eaf3fb}
+#crossword .board-top small{color:#8099b1}
+#crossword .board-counter strong{color:#5ce0cf}
+#crossword .board-counter span{color:#819bb3}
+#crossword .crossword-progress{background:#1a2b3d}
+#crossword .crossword-progress span{background:linear-gradient(90deg,#2d91a0,#58e0c9)}
+#crossword .board-controls>span{color:#92a9bf}
+#crossword .direction-switch{background:#0b1725;border-color:#2e455b}
+#crossword .direction-btn{color:#9aafc4}
+#crossword .direction-btn.active{background:linear-gradient(135deg,#247f8b,#15566b);color:#eafffc;box-shadow:0 3px 9px #0005}
+#crossword .grid-scroll{
+  padding:15px 12px 17px;border-color:#273e55;border-radius:12px;
+  background:radial-gradient(circle at 50% 38%,#14283a,#0b1725 88%);
+  box-shadow:inset 0 1px 8px #0005;scrollbar-color:#3a657b #101d2c;
+}
+#crossword .crossword-grid{--crossword-cell-size:clamp(25px,2.45vw,31px);gap:3px;width:max-content;margin:0 auto}
+#crossword .cell{width:var(--crossword-cell-size);height:var(--crossword-cell-size);border:1px solid #3b5872;border-radius:5px;background:#182b40;box-shadow:inset 0 1px #ffffff08;transition:background .15s,border-color .15s,transform .15s}
+#crossword .cell.blocked{border:1px solid #142538;background:linear-gradient(145deg,#0d1928,#101f30);box-shadow:inset 0 1px #ffffff05}
+#crossword .cell input{padding:3px 0 0;background:transparent;color:#e9f4ff;caret-color:#63e1d0;font-size:13px}
+#crossword .cell .cell-number{color:#83a9c1;font-size:7px}
+#crossword .cell:focus-within{z-index:3;transform:scale(1.06);border-color:#62e1d0;box-shadow:0 0 0 2px #52dfc933,0 4px 10px #0007}
+#crossword .cell.in-word{border-color:#4db7b5;background:#194258;box-shadow:inset 0 0 0 1px #337f89}
+#crossword .cell.in-word input{color:#e2fffb}
+#crossword .cell.word-start{border-color:#70e4d1;background:#236176}
+#crossword .cell.word-start .cell-number{color:#e7fffb;font-weight:800}
+#crossword .cell.correct{border-color:#4ccf99;background:#153f39;box-shadow:inset 0 0 0 1px #317b62}
+#crossword .cell.correct input{color:#8af0c4;background:transparent}
+#crossword .cell.wrong{border-color:#e16c80;background:#442433;box-shadow:inset 0 0 0 1px #9a4759}
+#crossword .cell.wrong input{color:#ff9eac;background:transparent}
+#crossword .board-legend{color:#8da4bb}
+#crossword .board-legend i{border-color:#47617a;background:#182b40}
+#crossword .board-legend .legend-block{background:#0d1928;border-color:#263a4e}
+#crossword .board-legend .legend-selected{background:#236176;border-color:#70e4d1}
+#crossword .board-actions .btn{min-height:41px}
+#crossword .btn-primary,.btn-primary{background:linear-gradient(135deg,#278d9a,#17647a);color:#effffc;box-shadow:0 5px 14px #0005}
+#crossword .btn-primary:hover,.btn-primary:hover{background:linear-gradient(135deg,#35a9b0,#1d7890)}
+#crossword .btn-ghost,.btn-ghost{background:#1b2c40;color:#b6c9db;border:1px solid #30485f}
+#crossword .btn-ghost:hover,.btn-ghost:hover{background:#253b52}
+#crossword .result-line{background:#17283a;color:#a9bdd0;border:1px solid #2b435a}
+#crossword .result-line.success{background:#12352f;color:#7de0b5;border-color:#266b58}
+#crossword .result-line.needs-work{background:#342a20;color:#e4bd82;border-color:#665033}
+#crossword .clues-card{padding:20px 17px;background:linear-gradient(160deg,#111f30,#0e1a29);border-color:#2d4359;box-shadow:0 12px 30px #0004}
+#crossword .clues-title{border-color:#2a4055}
+#crossword .clues-emblem{background:#1b394d;color:#65dfd0}
+#crossword .clues-title h4{color:#e8f1fa}
+#crossword .clues-title small{color:#849cb3}
+#crossword .clue-group h5{color:#7f9bb4}
+#crossword .clue-group h5 span{background:#1b3349;color:#63dccc}
+#crossword .clue-group ol{gap:5px}
+#crossword .clue-button{color:#b5c5d5}
+#crossword .clue-button:hover{background:#1a3044}
+#crossword .clue-number{background:#1c3147;color:#7edfd3}
+#crossword .clue-text{font-size:10px;line-height:1.55;color:#b2c2d2}
+#crossword .clue-status{color:#67829b}
+#crossword .clue-item.active{border-color:#2d7480;background:#143144}
+#crossword .clue-item.active .clue-number{background:#267e87;color:#f0fffc}
+#crossword .clue-item.solved .clue-text{color:#78d9ad}
+#crossword .clue-item.solved .clue-number{background:#174737;color:#87e5b8}
+#crossword .clue-item.solved .clue-status{color:#72dbac}
+/* Quiz e forca acompanham a identidade escura. */
+.quiz-progress{color:#9db1c5}
+.quiz-progress>div{background:#1a2a3c}
+.quiz-progress>div span{background:linear-gradient(90deg,#318e9d,#59e1c9)}
+.quiz-question{color:#e8f1fa}
+.quiz-option{background:#142337;border-color:#2c435a;color:#d6e2ef}
+.quiz-option:hover:not(:disabled){background:#193149;border-color:#4b93a5}
+.quiz-option .letter{background:#20374e;color:#93b8cc}
+.quiz-option.selected{border-color:#4dbdb7;background:#17394b}
+.quiz-option.correct{border-color:#4ccf99;background:#153d35;color:#a3f0cc}
+.quiz-option.incorrect{border-color:#d96b7f;background:#402432;color:#ffabb6}
+.quiz-footer{border-color:#293e53}
+.quiz-footer span{color:#a2b4c6}
+#hangman .hangman-card{background:#111f30;border-color:#2d4359;box-shadow:0 12px 32px #0004}
+#hangman .hangman-visual{background:radial-gradient(ellipse at 50% 42%,#172e43,#102034 62%,#0c1928);border-color:#2b4359}
+#hangman .hangman-scene{background:#101e2e;border-color:#2d465e;box-shadow:0 8px 25px #0005}
+#hangman .hangman-scene-top{color:#91abc2}
+#hangman #hangman-mistakes{color:#66dccc}
+#hangman .gallows-lines{stroke:#587895;filter:drop-shadow(0 2px 1px #0006)}
+#hangman .rope-line{stroke:#70a1b5}
+#hangman .hangman-part{stroke:#62dfce}
+#hangman circle.hangman-part{fill:#162a40}
+#hangman .mistake-track span{background:#25384b}
+#hangman .mistake-track span.used{background:linear-gradient(90deg,#278f9a,#58ddc8)}
+#hangman .hangman-status{color:#9db2c7}
+#hangman .hangman-status.success{color:#75dfaa}
+#hangman .hangman-status.failure{color:#ff8294}
+#hangman .hangman-play>.mode-kicker{color:#61cfc6}
+#hangman .hangman-letter{border-color:#49647d;color:#eff7ff}
+#hangman .hangman-letter.revealed{border-color:#62dfce;color:#83f0dd}
+#hangman .hangman-hint{color:#a4b5c6}
+#hangman .hangman-guesses{background:#142337;border-color:#2c435a}
+#hangman .hangman-guesses>span,#hangman #hangman-guessed{color:#8ea8bf}
+#hangman .guess-chip.hit{background:#174638;color:#82e5b5}
+#hangman .guess-chip.miss{background:#482632;color:#ff9aaa}
+#hangman .keyboard-title{color:#8ea8bf}
+#hangman .key{background:#1a2c40;border-color:#334c64;color:#d7e5f1;box-shadow:0 2px 3px #0004}
+#hangman .key:hover:not(:disabled){background:#21465a;border-color:#51c5bd}
+#hangman .key.hit{background:#174638;border-color:#347c62;color:#8be9bc}
+#hangman .key.miss{background:#482632;border-color:#884454;color:#ffa2b0}
+footer{color:#748da6}
+footer .brand-mark.small{background:linear-gradient(145deg,#1d536a,#14283f);color:#d9fff9;border-color:#397b91}
+@media(max-width:900px){#crossword .crossword-layout{grid-template-columns:1fr}#crossword .clues-card{background:#101d2c}}
+@media(max-width:640px){
+  #crossword .crossword-grid{--crossword-cell-size:23px;gap:2px}
+  #crossword .cell{border-radius:4px}
+  #crossword .cell input{font-size:10px}
+  #crossword .grid-scroll{padding:11px 7px 13px}
+  #crossword .clue-text{font-size:10px}
+}
+
+/* Ajustes de encaixe em telas menores. */
+#crossword .board-card,
+#crossword .clues-card,
+#crossword .grid-scroll,
+#crossword .crossword-layout{min-width:0;max-width:100%}
+@media(max-width:900px){
+  #crossword .crossword-layout{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:640px){
+  #crossword .board-card,
+  #crossword .clues-card{width:100%;min-width:0}
+  #crossword .grid-scroll{width:100%;overflow-x:auto;overscroll-behavior-x:contain}
+  #crossword .clue-group ol{max-height:none;overflow:visible;padding-right:0}
+  #crossword .clues-card{grid-template-columns:minmax(0,1fr)}
+  #crossword .clues-title{grid-column:auto}
+  #crossword .clue-button{grid-template-columns:27px minmax(0,1fr) 16px}
+}
+@media(max-width:640px){
+  #crossword .crossword-grid{--crossword-cell-size:clamp(18px,4.6vw,23px);gap:2px}
+  #crossword .cell input{font-size:9px}
+  #crossword .cell .cell-number{font-size:5px;left:2px}
+}
+@media(max-width:640px){#crossword .crossword-grid{--crossword-cell-size:clamp(17px,4.5vw,22px)}}
