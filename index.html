@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Uma aventura na Academia Arcana para aprender Arquitetura Computacional com cruzadinha, quiz e desafios mágicos.">
+  <title>Academia Arcana | Arquitetura Computacional</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Academia Arcana, início">
+      <span class="brand-mark">✦</span>
+      <span>ACADEMIA ARCANA<small>ARTES DA ARQUITETURA COMPUTACIONAL</small></span>
+    </a>
+    <span class="top-tag"><span class="live-dot"></span> ESCOLA DE MAGIA COMPUTACIONAL</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">ESCOLA DE MAGIA E TECNOLOGIA</p>
+        <h1>A magia da<br><span>computação.</span></h1>
+        <p class="hero-text">Embarque como aprendiz da Academia Arcana e domine os artefatos, núcleos e encantamentos que fazem um computador funcionar.</p>
+        <div class="hero-meta"><span>03 PROVAS MÁGICAS</span><i></i><span>16 RUNAS DO SABER</span><i></i><span>ACESSO AO GRIMÓRIO</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="arcane-book"><div class="book-rune">✧</div><span>GRIMÓRIO</span><b>ARQ</b><small>LIBER COMPUTATUM</small></div>
+        <span class="float-code code-a">✦ RUNA 01</span><span class="float-code code-b">ᚨ ᚱ ᚲ</span>
+        <span class="spark spark-a">✧</span><span class="spark spark-b">✦</span>
+      </div>
+    </section>
+
+    <section class="game-shell">
+      <div class="section-heading">
+        <div><p class="eyebrow">O CAMINHO DO APRENDIZ</p><h2>Provas da Academia</h2></div>
+        <div class="progress-pill"><span class="live-dot"></span> SEU TREINAMENTO COMEÇA AGORA</div>
+      </div>
+      <nav class="tabs" aria-label="Modos de jogo">
+        <button class="tab active" data-tab="crossword"><span class="tab-icon">▦</span><span><b>Cruzadinha</b><small>Decifre as runas</small></span><span class="tab-arrow">↗</span></button>
+        <button class="tab" data-tab="quiz"><span class="tab-icon">?</span><span><b>Quiz</b><small>Responda ao conselho</small></span><span class="tab-arrow">↗</span></button>
+        <button class="tab" data-tab="hangman"><span class="tab-icon">⌁</span><span><b>Forca</b><small>Revele o encantamento</small></span><span class="tab-arrow">↗</span></button>
+      </nav>
+
+      <section class="mode-panel active" id="crossword">
+        <div class="mode-intro">
+          <div><span class="mode-kicker">PROVA 01 / 03</span><h3>O enigma das runas</h3><p>Consulte os pergaminhos e complete o quadro rúnico. Cada termo se conecta a outro.</p></div>
+          <div class="stat-card"><span>PALAVRAS</span><strong>16</strong><small>para descobrir</small></div>
+        </div>
+        <div class="crossword-layout">
+          <div class="board-card">
+            <div class="board-top">
+              <div><span class="board-index">01</span><div><b>O CÍRCULO RÚNICO</b><small>Um quadro, dezesseis palavras conectadas</small></div></div>
+              <div class="board-counter"><strong id="crossword-count">00/16</strong><span>resolvidas</span></div>
+            </div>
+            <div class="crossword-progress"><span id="crossword-progress-bar"></span></div>
+            <div class="board-controls">
+              <span>Direção de preenchimento</span>
+              <div class="direction-switch" role="group" aria-label="Direção da palavra"><button type="button" class="direction-btn active" data-direction="H" aria-pressed="true">Horizontal</button><button type="button" class="direction-btn" data-direction="V" aria-pressed="false">Vertical</button></div>
+            </div>
+            <div class="grid-scroll"><div id="crossword-grid" class="crossword-grid" aria-label="Tabuleiro da cruzadinha"></div></div>
+            <div class="board-legend"><span><i class="legend-open"></i> Casa para preencher</span><span><i class="legend-block"></i> Casa bloqueada</span><span><i class="legend-selected"></i> Palavra selecionada</span></div>
+            <div class="board-actions"><button class="btn btn-primary" id="check-crossword">Conferir respostas <span>→</span></button><button class="btn btn-ghost" id="reset-crossword">↻ Limpar tabuleiro</button></div>
+            <div class="result-line" id="crossword-result" aria-live="polite">Escolha uma pista ou uma casa e comece a preencher.</div>
+          </div>
+          <aside class="clues-card">
+            <div class="clues-title"><span class="clues-emblem">✧</span><div><h4>Livro de pistas</h4><small>Selecione uma pista para marcar a palavra</small></div></div>
+            <div class="clue-group"><h5><span>↓</span> VERTICAIS</h5><ol id="vertical-clues"></ol></div>
+            <div class="clue-group"><h5><span>→</span> HORIZONTAIS</h5><ol id="horizontal-clues"></ol></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="mode-panel" id="quiz">
+        <div class="mode-intro">
+          <div><span class="mode-kicker">PROVA 02 / 03</span><h3>Prova do conselho arcano</h3><p>Responda aos desafios do conselho e descubra quanto conhecimento acumulou.</p></div>
+          <div class="stat-card"><span>PERGUNTAS</span><strong id="quiz-total">08</strong><small>rodada atual</small></div>
+        </div>
+        <div class="quiz-card">
+          <div class="quiz-progress"><span id="quiz-progress-label">PERGUNTA 01 DE 08</span><div><span id="quiz-progress-bar"></span></div></div>
+          <div id="quiz-content"></div>
+          <div class="quiz-footer"><span id="quiz-feedback" aria-live="polite">Selecione uma alternativa para responder.</span><button class="btn btn-primary" id="next-question" disabled>Próxima pergunta <span>→</span></button></div>
+        </div>
+      </section>
+
+      <section class="mode-panel" id="hangman">
+        <div class="mode-intro">
+          <div><span class="mode-kicker">PROVA 03 / 03</span><h3>O feitiço oculto</h3><p>Revele o termo escondido antes que sua energia arcana se esgote.</p></div>
+          <div class="stat-card"><span>TENTATIVAS</span><strong id="hangman-lives">06</strong><small>restantes</small></div>
+        </div>
+        <div class="hangman-card">
+          <div class="hangman-visual">
+            <div class="hangman-scene">
+              <div class="hangman-scene-top"><span>O RITUAL DO ÚLTIMO PALPITE</span><span id="hangman-mistakes">0 / 6 erros</span></div>
+              <svg class="hangman-drawing" id="hangman-drawing" viewBox="0 0 240 235" role="img" aria-label="Desenho da forca. O boneco aparece progressivamente a cada erro.">
+                <defs><linearGradient id="woodGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c9a66e"/><stop offset="1" stop-color="#8f6848"/></linearGradient></defs>
+                <g class="gallows-lines" fill="none" stroke="url(#woodGradient)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="M28 210 H202 M68 210 V25 H157 V48"/><path d="M68 54 L100 25" stroke-width="5"/></g>
+                <path class="rope-line" d="M157 48 V57" fill="none" stroke="#9d815e" stroke-width="4" stroke-linecap="round"/>
+                <circle class="hangman-part" data-step="1" cx="157" cy="77" r="19" fill="#fff8ec" stroke="#73458d" stroke-width="5"/>
+                <path class="hangman-part" data-step="2" d="M157 97 V151" fill="none" stroke="#73458d" stroke-width="6" stroke-linecap="round"/>
+                <path class="hangman-part" data-step="3" d="M157 111 L127 135" fill="none" stroke="#73458d" stroke-width="6" stroke-linecap="round"/>
+                <path class="hangman-part" data-step="4" d="M157 111 L187 135" fill="none" stroke="#73458d" stroke-width="6" stroke-linecap="round"/>
+                <path class="hangman-part" data-step="5" d="M157 151 L130 187" fill="none" stroke="#73458d" stroke-width="6" stroke-linecap="round"/>
+                <path class="hangman-part" data-step="6" d="M157 151 L184 187" fill="none" stroke="#73458d" stroke-width="6" stroke-linecap="round"/>
+              </svg>
+              <div class="mistake-track" id="mistake-track" aria-label="Seis tentativas disponíveis"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+            <p id="hangman-status" aria-live="polite">Você tem 6 tentativas. Boa sorte!</p>
+          </div>
+          <div class="hangman-play">
+            <span class="mode-kicker">REVELE A PALAVRA RÚNICA</span>
+            <div class="hangman-word" id="hangman-word" aria-label="Letras da palavra"></div>
+            <p class="hangman-hint" id="hangman-hint"></p>
+            <div class="hangman-guesses"><span>LETRAS UTILIZADAS</span><div id="hangman-guessed" aria-live="polite">Nenhuma ainda</div></div>
+            <div class="keyboard-title">ESCOLHA UMA LETRA</div>
+            <div id="hangman-keyboard" class="keyboard" aria-label="Teclado de letras"></div>
+            <button class="btn btn-primary" id="new-hangman">Novo encantamento <span>↻</span></button>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+  <footer><span class="brand-mark small">B<span>.</span></span><span>ACADEMIA ARCANA · ARQUITETURA COMPUTACIONAL</span><span>APRENDA. PRATIQUE. DOMINE.</span></footer>
+</body>
+</html>
