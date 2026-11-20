@@ -42,14 +42,3 @@ As palavras que começam na mesma casa compartilham o mesmo número.
 ## Executar localmente
 
 Basta abrir o arquivo `index.html` em um navegador. Não é necessário instalar dependências ou iniciar um servidor.
-
-## Publicar no GitHub Pages
-
-1. Crie um repositório público chamado `arqcomp-cruzadinha`.
-2. Envie os arquivos `index.html`, `style.css`, `script.js` e `README.md` para a raiz do repositório.
-3. Faça commits ao longo do desenvolvimento, em pelo menos dois dias diferentes, conforme solicitado na atividade.
-4. No GitHub, abra **Settings → Pages**.
-5. Em **Build and deployment**, selecione **Deploy from a branch**, escolha `main` e `/ (root)`, e salve.
-6. Aguarde a publicação e teste o endereço em uma janela anônima.
-
-O link do site publicado deve ser enviado no Moodle. Não inclua RA, e-mail, telefone ou outros dados pessoais no repositório público.
